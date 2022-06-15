@@ -1,44 +1,28 @@
-import React from 'react';
-import './App.css';
-import MakeDropdown from './MakeDropdown';
-import YearDropdown from './YearDropdown';
-import TrimDropdown from './TrimDropdown';
-import {CarProvider} from './CarContext';
-import SubmitButton from './SubmitButton';
+import React, { Fragment } from "react";
+import "./App.css";
+import { CarProvider } from "./CarContext";
+import HomePage from "./HomePage";
+import SearchPage from "./SearchPage";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  // const [makes, setMakes] = useState([]);
-
-  // const options = {
-  //   method: 'GET',
-  //   url: 'https://vehapi.com/vehicle/makes/2022',
-  //   // headers: {
-  //   //   'X-RapidAPI-Key': '1e25ba540dmsh030c8793b201de6p1d469bjsn6d545a8c1532',
-  //   //   'X-RapidAPI-Host': 'car-data.p.rapidapi.com'
-  //   // }
-  // };
-  
-  // axios.request(options).then(function (response) {
-  //   console.log(response.data);
-  //   setMakes(response.data)
-  // }).catch(function (error) {
-  //   console.error(error);
-  // });
-
-  const makes = [{"make":"Acura"},{"make":"Audi"},{"make":"BMW"},{"make":"Buick"},{"make":"Cadillac"},{"make":"Chevrolet"},{"make":"Ford"},{"make":"Genesis"},{"make":"GMC"},{"make":"Honda"},{"make":"Hyundai"},{"make":"INFINITI"},{"make":"Kia"},{"make":"Land Rover"},{"make":"Lexus"},{"make":"MINI"},{"make":"Mitsubishi"},{"make":"Nissan"},{"make":"Porsche"},{"make":"RAM"},{"make":"Subaru"},{"make":"Toyota"},{"make":"Volkswagen"},{"make":"Volvo"}]
-
   return (
     <div className="App">
-      <CarProvider>
-
-      
       <header className="App-header">
-        <YearDropdown />
-        <MakeDropdown makes={makes} />
-        <TrimDropdown />
-        <SubmitButton/>
+        <CarProvider>
+          <Router>
+            <Fragment>
+              <Routes>
+                <Route exact path="/" element={<HomePage />}>
+                  {/* <Route exact path='/search' element={<Home/>}/> */}
+                </Route>
+                <Route exact path="/search" element={<SearchPage />} />
+                {/* <Route exact path='/login' element={<Login/>}/> */}
+              </Routes>
+            </Fragment>
+          </Router>
+        </CarProvider>
       </header>
-      </CarProvider>
     </div>
   );
 }

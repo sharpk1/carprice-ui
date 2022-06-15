@@ -6,15 +6,15 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import CarContext from './CarContext';
 
-const MakeDropdown = (props) => {
+const ModelDropdown = (props) => {
     const [age, setAge] = React.useState('');
     const {makes} = props;
 
-    const { addToMake } = useContext(CarContext);
+    const { addToModel } = useContext(CarContext);
 
     const handleChange = (event) => {
       setAge(event.target.value);
-      addToMake(event.target.value);
+      addToModel(event.target.value);
     };
   
     return (
@@ -40,4 +40,4 @@ const MakeDropdown = (props) => {
     );
 }
 
-export default MakeDropdown;
+export default ModelDropdown;

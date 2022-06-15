@@ -1,4 +1,4 @@
-import React, {useState, useContext} from "react";
+import React, {useContext} from "react";
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -9,12 +9,11 @@ import CarContext from './CarContext';
 const TrimDropdown = () => {
 
     const [age, setAge] = React.useState('');
-    const [trims, setTrims] = useState([]);
 
-    const { year } = useContext(CarContext);
+    const { addToTrim } = useContext(CarContext);
 
     const handleChange = (event) => {
-      console.log(year);
+        addToTrim(event.target.value)
         setAge(event.target.value);
       };
   
@@ -27,11 +26,7 @@ const TrimDropdown = () => {
             value={age}
             label="Trim"
             onChange={handleChange}
-          >
-            {trims.map((make) => {
-                return <MenuItem value={make}>{make}</MenuItem>
-            })}
-            
+          > 
             <MenuItem value={20}>Twenty</MenuItem>
             <MenuItem value={30}>Thirty</MenuItem>
           </Select>
