@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import CarContext from "./CarContext";
 import Button from "@mui/material/Button";
+import {Link} from "react-router-dom";
 
 const SubmitButton = () => {
   const { year, trim, make, model } = useContext(CarContext);
@@ -10,7 +11,7 @@ const SubmitButton = () => {
   };
 
   return (
-    <Button variant="contained" onClick={handleSearch}>
+    <Button variant="contained" component={Link} to="/results" onClick={handleSearch}>
       Search
     </Button>
   );

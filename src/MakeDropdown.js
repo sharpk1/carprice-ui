@@ -28,9 +28,9 @@ const MakeDropdown = (props) => {
             label="Make"
             onChange={handleChange}
           >
-            {makes.map((make) => {
+            {/* {makes.map((make) => {
                 return <MenuItem value={make.make}>{make.make}</MenuItem>
-            })}
+            })} */}
             
             <MenuItem value={"toyota"}>Toyota</MenuItem>
             {/* <MenuItem value={30}>Thirty</MenuItem> */}

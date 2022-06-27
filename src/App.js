@@ -3,6 +3,7 @@ import "./App.css";
 import { CarProvider } from "./CarContext";
 import HomePage from "./HomePage";
 import SearchPage from "./SearchPage";
+import ResultsPage from "./ResultsPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
                   {/* <Route exact path='/search' element={<Home/>}/> */}
                 </Route>
                 <Route exact path="/search" element={<SearchPage />} />
+                <Route exact path="/results" element={<ResultsPage />} />
                 {/* <Route exact path='/login' element={<Login/>}/> */}
               </Routes>
             </Fragment>

@@ -17,6 +17,11 @@ const TrimDropdown = () => {
         setAge(event.target.value);
       };
   
+      
+
+
+
+
     return (<Box sx={{ minWidth: 130 }}>
         <FormControl fullWidth>
           <InputLabel id="demo-simple-select-label">Trim</InputLabel>
@@ -27,8 +32,8 @@ const TrimDropdown = () => {
             label="Trim"
             onChange={handleChange}
           > 
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            <MenuItem value={20}>SR5 Premium 4WD</MenuItem>
+            {/* <MenuItem value={30}>Thirty</MenuItem> */}
           </Select>
         </FormControl>
       </Box>)

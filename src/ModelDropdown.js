@@ -20,19 +20,19 @@ const ModelDropdown = (props) => {
     return (
       <Box sx={{ minWidth: 130 }}>
         <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-label">Make</InputLabel>
+          <InputLabel id="demo-simple-select-label">Model</InputLabel>
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
             value={age}
-            label="Make"
+            label="Model"
             onChange={handleChange}
           >
-            {makes.map((make) => {
+            {/* {makes.map((make) => {
                 return <MenuItem value={make.make}>{make.make}</MenuItem>
-            })}
+            })} */}
             
-            <MenuItem value={"toyota"}>Toyota</MenuItem>
+            <MenuItem value={"4runner"}>4Runner</MenuItem>
             {/* <MenuItem value={30}>Thirty</MenuItem> */}
           </Select>
         </FormControl>
