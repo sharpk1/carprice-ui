@@ -16,6 +16,7 @@ function App() {
               <Routes>
                 <Route exact path="/" element={<HomePage />}>
                   {/* <Route exact path='/search' element={<Home/>}/> */}
+{/* <Route exact path='/search' element={<Home/>}/> */}
                 </Route>
                 <Route exact path="/search" element={<SearchPage />} />
                 <Route exact path="/results" element={<ResultsPage />} />
