@@ -6,7 +6,7 @@ const HomePage = () => {
   return (
     <>
       <Button variant="contained" component={Link} to="/search">Search</Button>
-      <Button variant="contained">Submit</Button>
+      <Button variant="contained">Submittt</Button>
     </>
   );
 };
